@@ -11,21 +11,6 @@ We begin where most systems stall: in what lingers.
 Objects that resist collection. Emotions that overstayed.  
 This directory holds the first pass at building from what remains.
 
-### Project Structure
-core/
-├── analysis/
-│ ├── introspection.cpp // Tracks internal feedback loops
-│ └── introspection.h
-├── memory.cpp // Shared memory logic
-├── memory.h
-├── retained.cpp // Current phase logic
-├── retained.h
-├── main.cpp // Entry point
-
-yaml
-Copy
-Edit
-
 ### Notes
 - Essays are published separately at [smolnero.com](https://smolnero.com).
 - This codebase is not a product. It’s a companion.
