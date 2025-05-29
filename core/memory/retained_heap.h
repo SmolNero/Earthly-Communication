@@ -3,10 +3,11 @@
 
 #include <string>
 #include <vector>
-#include <unordered_map>
+#include <unordered_map> 	// A map is implemented by the hash table
+
+struct RetainedObject { 
+std::string id;
+std::string content;
 
 
-
-
-
-
+}
