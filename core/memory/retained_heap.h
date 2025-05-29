@@ -6,8 +6,13 @@
 #include <unordered_map> 	// A map is implemented by the hash table
 
 struct RetainedObject { 
-std::string id;
-std::string content;
+	std::string id;
+	std::string content;
+	bool isCoreMemory;     // Non-negotiable, foundational truths
+ };
+
+ class RetainedHeap {
 
 
-}
+ 	
+ }
