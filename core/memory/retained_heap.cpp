@@ -17,3 +17,6 @@ void RetainedHeap::remove(const std::string& id) {
 	}
 }
 
+void RetainedHeap::inspect(){
+	std::cout << "\n--- Retained Heap Inspection ---\";
+}
