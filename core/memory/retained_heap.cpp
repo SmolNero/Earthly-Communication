@@ -19,4 +19,8 @@ void RetainedHeap::remove(const std::string& id) {
 
 void RetainedHeap::inspect(){
 	std::cout << "\n--- Retained Heap Inspection ---\";
+	for (const auto& [id, obj] : heap) {
+		if (obj.isCoreMemory) std::cout << " [core]";
+		std::cout << "\n";
+	}
 }
