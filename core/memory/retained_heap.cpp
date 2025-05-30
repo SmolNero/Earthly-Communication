@@ -8,5 +8,12 @@ void RetainedHeap::retain(const std::string& id, cont std::string& content, bool
 
 
 void RetainedHeap::remove(const std::string& id) {
-	
+	auto it = heap.find(id);
+	if (it != heap.end() && !it->second.isCoreMemory) {
+		std::cout << "[Removed] \"" << id << "\"" << std::endl;
+		heap.erase(it);
+	} else {
+		std::cout << "[Skipped] \"" << id << "\" is core memory or does not exist." << std::endl;
+	}
 }
+
