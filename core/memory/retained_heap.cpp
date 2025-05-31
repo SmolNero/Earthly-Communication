@@ -6,7 +6,6 @@ void RetainedHeap::retain(const std::string& id, cont std::string& content, bool
 	std::cout << "[Retained \"" << id << "\" => " << content << (core ? " (Core memory)"  : "") << std::endl;
 }
 
-
 void RetainedHeap::remove(const std::string& id) {
 	auto it = heap.find(id);
 	if (it != heap.end() && !it->second.isCoreMemory) {
@@ -23,4 +22,14 @@ void RetainedHeap::inspect(){
 		if (obj.isCoreMemory) std::cout << " [core]";
 		std::cout << "\n";
 	}
+}
+
+std::vector<RetainedHeap::exportCoreMemory() const {
+	std::vector<RetainedObject> coreMemories;
+	for (const auto& [id, obj] : heap) {
+		if (obj,isCoreMemory) {
+			coreMemories,push_back(obj);
+		}
+	}
+	return coreMemories; 
 }
